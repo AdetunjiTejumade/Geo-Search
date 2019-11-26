@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
- 
+    <!-- <form><input type="text" >
+        <input type="submit" id="submit" onclick="cl">
+    </form> -->
+
+    <!-- <img width="600" src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/3.3408,6.5961,4.8/500x250?access_token=pk.eyJ1IjoidGVqdW1hZGUiLCJhIjoiY2sybWFwejFiMGVsZjNqbjV5NmdqdzZyZSJ9.lOgB0z3a000HaKHWx94IIQ" alt="Mapbox Map of -73.7638,42.6564">
+    © <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a> © <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a> -->
+
+
+
+    <!-- For small screens-->
+    <div class="container" id="container">
+        <div class="header center">
+            <div class="con-sm" id="mapArea">
+                <div class="header-con">
+                    <h1 class="logo">MAPBOX</h1>
+                    <div class="search-box">
+                        <i class="fa fa-search search-icon"></i>                        
+                          <input type="text" class="place" id="place" placeholder="eg..Lagos,Nigeria">
+                            <input type="submit" id="go" value="Search" class="searchButton">
+                        
+                    </div>
+                </div>
+
+                <!-- <div id="weather" class="weather hide-sm">
+                    <h1>Weather</h1>
+                    <h3>Location : lagos</h3>
+                    <h3>Zip code : 100001</h3>
+                    <h3 id>Temperature : 30</h3>
+                    <h3 class="marginButtomNone">Wind Speed : 30m/hr</h3>
+                </div> -->
+
+                <div class="weather-btn-holder"><button class="weather-btn" id="weather-btn">Weather</button></div>
+            </div>
+            <!-- for small screen -->
+
+            <!-- for large screen -->
+            <!-- <div class="header-con-lg hide-sm">
+
+                <div class="map">
+                    <div class="logo">
+                        <h1>jdndj</h1>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- <a onclick="myFunction()">show</a> -->
+            <!-- Weather -->
+
+        </div>
+
+
+        <!-- Large Screens -->
+        <div id="weather" class="weather-lg hide-sm">
+            <h1 id="city">Lagos</h1>
+            
+            <p id="zipcode">Zip code - 100001</p>
+            <p id="currency">currency - #</p>
+
+
+            <h3>Weather Condition</h3>
+            <p id="temp">Temp - 45</p>
+            <p id="hum">Humudity - 45</p>
+            <p id="wind-speed">Temp - 45</p>
+
+
+
+
+        </div>
+
+    </div>
+    <script src="function.js" type="text/javascript"></script>
 </body>
+
 </html>
