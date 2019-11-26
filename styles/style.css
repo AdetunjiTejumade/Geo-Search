@@ -19,10 +19,16 @@ h1,div{
 
     background-color: rgb(112, 125, 160);
     height: 100%;
-    background-size:cover ;
+    /* background-size:cover ;
     flex-direction: column;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
+}
+.con-sm img{
+    height: 100%;
+    max-width: 100%;}
+.header-con{
+     position: absolute;
 }
 .header{
     /* padding-top: 30px; */
@@ -65,7 +71,7 @@ h1,div{
     grid-row: 1;
     grid-column: 1/2;
     z-index: 2;
-    color: #6f7070;
+    color: #33322f;
 }
 .place{
     border: 0;
@@ -84,7 +90,7 @@ background-color: #f7f6f600;
    
 }
 .searchButton{
-    background: #6f7070;
+    background: #33322f;
     border: 0;
     color:white;
     padding: 0.5rem;
@@ -112,6 +118,16 @@ background-color: #f7f6f600;
 .show{
     display: block;
 }
+.down{
+    position: absolute;
+    top: 90%;
+    left: 8px;
+    right: 8px;
+}
+.down i{
+    font-size: 2em;
+    color: #33322f;
+}
 /* small screen */
 /* @media screen and (max-width: 320px){
     .weather-lg{
@@ -120,9 +136,29 @@ background-color: #f7f6f600;
     .header-con-lg{
         display: none;
     } */
+    @media only screen and (min-width: 500px) {
+        .header{
+            height: 100%;
+        }
+        .header-con{
+            left: 8px;
+            right: 8px;
+        }
+       
+     }
 
+@media only screen and (max-width: 500px) {
+    .header{
+        height: 65%;
+    }
+    .down{display: none;}
+    .header-con{
+        left: 8px;
+        right: 8px;
+    }
+ }
 /* large screen */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 800px){
     .header-con .logo{
         display: none;
     }
@@ -130,12 +166,21 @@ background-color: #f7f6f600;
        display: none;
 
     }
+    .down{
+        display: none;
+    }
+    .con-sm{
+        position: absolute;
+    }
+    .con-sm img{
+        max-width: 100%;
+    }
     .header-con{
-        
+        left: 1px;
+        right: 2px;
     }
     .header-con-lg{
         display: inline;
-        background-image: url();
     }
     .container{
         display: grid;
