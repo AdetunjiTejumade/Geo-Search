@@ -1,0 +1,221 @@
+html,body{
+    height: 100%;
+
+   margin: 0px;
+   
+   /* background-image: url('https://api.mapbox.com/v4/mapbox.emerald/-73.7638,42.6564,13/600x300@2x.png?access_token=pk.eyJ1IjoidGVqdW1hZGUiLCJhIjoiY2sybWFwejFiMGVsZjNqbjV5NmdqdzZyZSJ9.lOgB0z3a000HaKHWx94IIQ');
+   background-repeat: no-repeat;
+   background-size:cover ;*/
+} 
+h1,div{
+    margin-top: 0px;
+}
+.container{
+    /* background-image: url('https://api.mapbox.com/v4/mapbox.emerald/-73.7638,42.6564,13/600x300@2x.png?access_token=pk.eyJ1IjoidGVqdW1hZGUiLCJhIjoiY2sybWFwejFiMGVsZjNqbjV5NmdqdzZyZSJ9.lOgB0z3a000HaKHWx94IIQ'); */
+   height: 100%;
+  
+}
+.con-sm{
+
+    background-color: rgb(112, 125, 160);
+    height: 100%;
+    /* background-size:cover ;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between; */
+}
+.con-sm img{
+    height: 100%;
+    max-width: 100%;}
+.header-con{
+     position: absolute;
+}
+.header{
+    /* padding-top: 30px; */
+    height: 100%;
+}
+.logo{
+    margin-bottom: 35px;
+    color: white;
+}
+
+.center{
+    text-align: center;
+}
+.weather-btn-holder{
+    justify-content: flex-end;
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 30px;
+}
+.weather-btn{
+    height: 50px;
+    width: 150px;
+    outline: none;
+   
+   
+}
+.search-box{
+    /* margin-top: 40px; */
+    display: grid;
+    grid-template-columns: 5rem 4fr 1fr;
+    /* width: 300px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.search-icon{
+    padding: 0.5rem;
+    grid-row: 1;
+    grid-column: 1/2;
+    z-index: 2;
+    color: #33322f;
+}
+.place{
+    border: 0;
+    padding: 0.5rem;
+    grid-row: 1;
+    grid-column: 2/4;
+    outline: none;
+background-color: #f7f6f600;
+    /* width: 300px;
+    height: 50px;
+    text-indent: 13px;
+    outline-color: transparent;
+    border-radius: 5px;
+     */
+    
+   
+}
+.searchButton{
+    background: #33322f;
+    border: 0;
+    color:white;
+    padding: 0.5rem;
+    border-radius: 0;
+    grid-column: 4/5;
+    grid-row: 1;
+
+    /* background-color: transparent;
+    border-radius: 5px;
+    border-color: transparent;
+    height: 57px;
+    width: 60px;
+    font-size: 16px; */
+}
+.hide-sm{
+    display: none;
+}
+.marginButtomNone{
+    margin-bottom: 0px;
+}
+.weather{
+    
+    color: white;
+}
+.show{
+    display: block;
+}
+.down{
+    position: absolute;
+    top: 90%;
+    left: 8px;
+    right: 8px;
+}
+.down i{
+    font-size: 2em;
+    color: #33322f;
+}
+/* small screen */
+/* @media screen and (max-width: 320px){
+    .weather-lg{
+        display: none;
+    }
+    .header-con-lg{
+        display: none;
+    } */
+    @media only screen and (min-width: 500px) {
+        .header{
+            height: 100%;
+        }
+        .header-con{
+            left: 8px;
+            right: 8px;
+        }
+       
+     }
+
+@media only screen and (max-width: 500px) {
+    .header{
+        height: 65%;
+    }
+    .down{display: none;}
+    .header-con{
+        left: 8px;
+        right: 8px;
+    }
+ }
+/* large screen */
+@media screen and (min-width: 800px){
+    .header-con .logo{
+        display: none;
+    }
+    .weather-btn-holder{
+       display: none;
+
+    }
+    .down{
+        display: none;
+    }
+    .con-sm{
+        position: absolute;
+    }
+    .con-sm img{
+        max-width: 100%;
+    }
+    .header-con{
+        left: 1px;
+        right: 2px;
+    }
+    .header-con-lg{
+        display: inline;
+    }
+    .container{
+        display: grid;
+        justify-content: unset;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:' side main';
+    }
+    .header{
+        grid-area: main;
+        /* background-color: tomato; */
+        padding: 5px;
+    }
+    .search-box{
+        margin-top: 30px;  
+        margin-left: 70px;
+        margin-right: 70px;}
+    .weather-lg{
+        grid-area: side;
+        display: inline;
+        padding: 20px;
+
+        position: absolute;
+        top: 50px;
+        left: 5%;
+    }
+    .weather-lg h1 {
+        font-size: 40px;
+    }
+    .map{
+        background-image: url(https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/3.3408,6.5961,4.8/500x250?access_token=pk.eyJ1IjoidGVqdW1hZGUiLCJhIjoiY2sybWFwejFiMGVsZjNqbjV5NmdqdzZyZSJ9.lOgB0z3a000HaKHWx94IIQ);
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-color: teal;
+
+    }
+}
+
