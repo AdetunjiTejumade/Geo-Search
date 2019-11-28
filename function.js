@@ -4,7 +4,6 @@ const place = document.getElementById('place');
 const mapCon = document.getElementById('map-img');
 const btn = document.getElementById('go');
 
-// const weatherBtn = document.getElementById('weather-btn');
 const weather = document.getElementById('weather');
 const temp = document.getElementById('temp');
 const humidity = document.getElementById('humidity');
@@ -12,29 +11,6 @@ const windSpeed = document.getElementById('wind-speed');
 const zipCode = document.getElementById('zipcode');
 const cityName = document.getElementById('city');
 
-// /apis
-// OpenWeather API
-
-//
-
-// weatherBtn.addEventListener('click', () => {
-//   const a = weather.classList;
-//   if (a[1] === 'hide-sm') {
-//     weather.classList.remove('hide-sm');
-//   } else {
-//     weather.classList.add('hide-sm');
-//   }
-// });
-// Open weatherapi
-// const weatherapi = () = {
-//     fetch('http://api.openweathermap.org/data/2.5/weather?q=' + place.value + '&APPID=7d62003427c83ed606f15ceb8edeb5c1')
-//     .then(response => response.json())
-//     .then(data => {
-//     console.log(data) // Prints result from `response.json()` in getRequest
-//     })
-//     .catch(error => console.error(error));
-
-// };
 
 const getWeatherData = async () => {
   try {
