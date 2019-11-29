@@ -4,55 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta property="og:url" content="https://adetunjitejumade.github.io/Geo-Search/" />
+    <meta property="og:type" content="Geo Search App" />
+    <meta property="og:title" content="Geo-Search" />
+    <meta property="og:description" content="Get the map,weather condition, zipcode of your place of interest" />
+    <meta property="og:image" content="hhttps://adetunjitejumade.github.io/Geo-Search/images/site.png" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="styles/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- For small screens-->
-    <div class="container" id="container">
-        <div class="header center">
-            <div class="con-sm" id="mapArea">
-                <div class="header-con">
-                    <h1 class="logo">MAPBOX</h1>
-                    <div class="search-box">
-                        <i class="fa fa-search search-icon"></i>
-                        <input type="text" class="place" id="place" placeholder="eg..Lagos,Nigeria">
-                        <input type="submit" id="go" value="Search" class="searchButton">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=839044776528999&autoLogAppEvents=1"></script>
 
-                    </div>
+    <div class="main ">
 
+        <div class="container ">
+            <!-- large screen -->
+            <!-- <div class="side-bar"></div> -->
+
+            <!-- small screen -->
+            <div class="head-con">
+                <div class="heading">
+                    <h1 class="logo center">Geo Search</h1>
                 </div>
-                <img id="map-img" src="images/site.png">
+                <div class="search center">
+                    <input type="text" class="place" id="place" placeholder="eg..Lagos,Nigeria">
+                    <input type="submit" id="go" value="Search" class="searchButton"></div>
 
-
-                    <span class="down"><a href="#weather"><i class="fa fa-arrow-down"></i></a></i></span>
+                <div class="city-name center">
+                    <p>Location: <span id="city"></span></p>
+                    <p>Postal code: <span id="zipcode"></span></p>
+                </div>
             </div>
 
 
+            <div class="details">
+
+
+                <div class="weather">
+                    <!-- <img src="download.png" alt="weather"> -->
+
+                    <h3 class="center weather-condition" id="condition">Weather condition</h3>
+                    <ul>
+                        <li>Temperature: <span class="w-val"><span class="red-txt"
+                                    id="temp"></span><sup>o</sup><span id="tempSpan">C</span></span></li>
+                        <li>Humidity: <span class="w-val"><span class="red-txt" id="humidity">_</span>%</span></li>
+                        <li>Pressure: <span class="w-val"><span class="red-txt"
+                                    id="pressure">_</span>ph</span></li>
+
+                        <li>Wind speed: <span class="w-val"><span class="red-txt" id="wind-speed">_</span>m/hr</span>
+                        </li>
+    
+                        <li>Cloud Cover: <span class="w-val" id="cloud-cover"><span class="red-txt">_ </span></li>
+                        <li>Timezone: <span class="w-val"><span class="red-txt" id="time-zone">_</span></span></li>
+                    </ul>
+
+
+                </div>
+                <button class="btn red-bg convert-btn" id="convert-temp">Convert <sup>o</sup>C to<sup>o</sup>F</button>
+                <div class="fb-share-button" data-href="https://adetunjitejumade.github.io/Geo-Search/"
+                    data-layout="button_count" data-size="small"><a target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fadetunjitejumade.github.io%2FGeo-Search%2F&amp;src=sdkpreparse"
+                        class="fb-xfbml-parse-ignore">Share</a></div>
+            </div>
         </div>
-
-        <!-- Large Screens -->
-        <div id="weather" class="weather-lg">
-            <h1 id="city">Lagos</h1>
-
-            <p id="zipcode">Zip code - 100001</p>
-           
-
-            <h3>Weather Condition</h3>
-            <p id="temp">Temp - 45</p>
-            <p id="humidity">Humudity - 45</p>
-            <p id="wind-speed">Temp - 45</p>
-
+        <div class="map"><h1 id="error" class="center"></h1>
+            <img src="./images/site.png" id="map-img"></div>
+        <div class="footer">
+            <p>@Copyright tejumadeadetunji@gmail.com 2019</p>
         </div>
     </div>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsGZ2MDH8SfdeNXY1cZe49sClfsBx-0_4&libraries=places"></script>
-    <script src="function.js" type="text/javascript"></script>
-    
 
+
+    
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsGZ2MDH8SfdeNXY1cZe49sClfsBx-0_4&libraries=places"></script>
+    <script src="function.js" type="text/javascript"></script>
 </body>
 
 </html>
